@@ -54,13 +54,13 @@ describe('humanize-proptype', () => {
     return humanize({
       name: 'enum',
       value: [{
-        value: 'News',
+        value: '\'News\'',
         computed: false
       }, {
-        value: 'Photos',
+        value: '\'Photos\'',
         computed: false
       }]
-    }).should.be.eql('News│Photos');
+    }).should.be.eql('\'News\'│\'Photos\'');
   });
   it('Union', () => {
     return humanize({
@@ -126,10 +126,10 @@ describe('humanize-proptype', () => {
         value: {
           name: 'enum',
           value: [{
-            value: 'News',
+            value: '\'News\'',
             computed: false
           }, {
-            value: 'Photos',
+            value: '\'Photos\'',
             computed: false
           }]
         }
@@ -137,6 +137,6 @@ describe('humanize-proptype', () => {
         name: 'instanceOf',
         value: 'Message'
       }]
-    }).should.be.eql('{"color":"String","fontSize":"Number"}│Array(News│Photos)│Class(Message)');
+    }).should.be.eql('{"color":"String","fontSize":"Number"}│Array(\'News\'│\'Photos\')│Class(Message)');
   });
 });
