@@ -70,10 +70,10 @@ humanize({
 humanize({
   name: 'enum',
   value: [{
-    value: 'News',
+    value: '\'News\'',
     computed: false
   }, {
-    value: 'Photos',
+    value: '\'Photos\'',
     computed: false
   }]
 });
@@ -142,10 +142,10 @@ humanize({
     value: {
       name: 'enum',
       value: [{
-        value: 'News',
+        value: '\'News\'',
         computed: false
       }, {
-        value: 'Photos',
+        value: '\'Photos\'',
         computed: false
       }]
     }

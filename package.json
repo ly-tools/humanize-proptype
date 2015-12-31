@@ -1,6 +1,6 @@
 {
   "name": "humanize-proptype",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Convert property type object from react-docgen to humanized string",
   "main": "index.js",
   "scripts": {
