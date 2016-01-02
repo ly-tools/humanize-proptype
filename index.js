@@ -29,8 +29,9 @@ function getTypeStr(type) {
       return 'Function';
     case 'shape':
       let shape = type.value;
-      Object.keys(shape).forEach(key => shape[key] = getTypeStr(shape[key]));
-      return JSON.stringify(shape);
+      let rst = {};
+      Object.keys(shape).forEach(key => rst[key] = getTypeStr(shape[key]));
+      return JSON.stringify(rst);
     default:
       return capitalize(type.name);
   }
