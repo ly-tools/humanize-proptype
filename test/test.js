@@ -60,7 +60,7 @@ describe('humanize-proptype', () => {
         value: '\'Photos\'',
         computed: false
       }]
-    }).should.be.eql('\'News\'│\'Photos\'');
+    }).should.be.eql('\'News\' │ \'Photos\'');
   });
   it('Union', () => {
     return humanize({
@@ -73,7 +73,7 @@ describe('humanize-proptype', () => {
         name: 'instanceOf',
         value: 'Message'
       }]
-    }).should.be.eql('String│Number│Class(Message)');
+    }).should.be.eql('String │ Number │ Class(Message)');
   });
   it('ArrayOf', () => {
     return humanize({
@@ -100,7 +100,7 @@ describe('humanize-proptype', () => {
           name: 'number'
         }
       }
-    }).should.be.eql('{"color":"String","fontSize":"Number"}');
+    }).should.be.eql('{\n  "color": "String",\n  "fontSize": "Number"\n}');
   });
   it('Custom', () => {
     return humanize({
@@ -137,6 +137,6 @@ describe('humanize-proptype', () => {
         name: 'instanceOf',
         value: 'Message'
       }]
-    }).should.be.eql('{"color":"String","fontSize":"Number"}│Array(\'News\'│\'Photos\')│Class(Message)');
+    }).should.be.eql('{\n  "color": "String",\n  "fontSize": "Number"\n} │ Array(\'News\' │ \'Photos\') │ Class(Message)');
   });
 });

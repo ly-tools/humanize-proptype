@@ -31,7 +31,7 @@ function getTypeStr(type) {
       let shape = type.value;
       let rst = {};
       Object.keys(shape).forEach(key => rst[key] = getTypeStr(shape[key]));
-      return JSON.stringify(rst);
+      return JSON.stringify(rst, null, 2);
     default:
       return capitalize(type.name);
   }
