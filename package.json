@@ -1,14 +1,14 @@
 {
-  "name": "humanize-proptype",
-  "version": "0.0.4",
-  "description": "Convert property type object from react-docgen to humanized string",
+  "name": "@dawsonbotsford/humanize-proptype",
+  "version": "0.0.5",
+  "description": "Convert property type object from react-docgen to humanized string. Fork of https://github.com/ly-tools/humanize-proptype",
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test ./node_modules/.bin/_mocha --require should --reporter spec",
     "test-cov": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- --require should",
     "test-travis": "NODE_ENV=test node ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- --require should"
   },
-  "author": "LingyuCoder",
+  "author": "dawsonbotsford",
   "license": "MIT",
   "devDependencies": {
     "istanbul": "~0.4.0",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LingyuCoder/humanize-proptype"
+    "url": "https://github.com/dawsonbotsford/humanize-proptype"
   },
   "keywords": [
     "humanize",
@@ -25,7 +25,7 @@
     "proptypes"
   ],
   "bugs": {
-    "url": "https://github.com/LingyuCoder/humanize-proptype/issues"
+    "url": "https://github.com/dawsonbotsford/humanize-proptype/issues"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org/"

@@ -77,7 +77,7 @@ humanize({
     computed: false
   }]
 });
-// => 'News'│'Photos'
+// => 'News' │ 'Photos'
 
 humanize({
   name: 'union',
@@ -90,7 +90,7 @@ humanize({
     value: 'Message'
   }]
 });
-// => String│Number│Class(Message)
+// => String │ Number │ Class(Message)
 
 humanize({
   name: 'arrayOf',
@@ -117,7 +117,12 @@ humanize({
     }
   }
 });
-// => {"color":"String","fontSize":"Number"}
+/* => 
+{
+  "color": "String",
+  "fontSize": "Number"
+} 
+*/
 
 humanize({
   name: 'custom',
@@ -154,7 +159,12 @@ humanize({
     value: 'Message'
   }]
 });
-// => {"color":"String","fontSize":"Number"}│Array('News'│'Photos')│Class(Message)
+/* => 
+{
+  "color": "String",
+  "fontSize": "Number"
+} │ Array('News' │ 'Photos') │ Class(Message) 
+*/
 ```
 
 ## Test

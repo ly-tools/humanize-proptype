@@ -8,9 +8,9 @@ function getTypeStr(type) {
     case 'instanceof':
       return `Class(${type.value})`;
     case 'enum':
-      return type.value.map(v => `${v.value}`).join('│');
+      return type.value.map(v => `${v.value}`).join(' │ ');
     case 'union':
-      return type.value.map(t => `${getTypeStr(t)}`).join('│');
+      return type.value.map(t => `${getTypeStr(t)}`).join(' │ ');
     case 'arrayof':
       return `Array(${getTypeStr(type.value)})`;
     case 'custom':
@@ -31,7 +31,7 @@ function getTypeStr(type) {
       let shape = type.value;
       let rst = {};
       Object.keys(shape).forEach(key => rst[key] = getTypeStr(shape[key]));
-      return JSON.stringify(rst);
+      return JSON.stringify(rst, null, 2);
     default:
       return capitalize(type.name);
   }
