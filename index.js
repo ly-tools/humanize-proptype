@@ -15,14 +15,14 @@ function getTypeStr(type) {
       return `Array(${getTypeStr(type.value)})`;
     case 'custom':
       if (type.raw.indexOf('function') !== -1 || type.raw.indexOf('=>') !== -1)
-        return `Custom(Function)`;
+        return 'Custom(Function)';
       else if (type.raw.toLowerCase().indexOf('objectof') !== -1) {
         let m = type.raw.match(RE_OBJECTOF);
         if (m && m[1])
           return `ObjectOf(${capitalize(m[1])})`;
         return 'ObjectOf';
       }
-      return `Custom`;
+      return 'Custom';
     case 'bool':
       return 'Boolean';
     case 'func':
@@ -30,7 +30,9 @@ function getTypeStr(type) {
     case 'shape':
       let shape = type.value;
       let rst = {};
-      Object.keys(shape).forEach(key => rst[key] = getTypeStr(shape[key]));
+      Object.keys(shape).forEach(key => {
+        rst[key] = getTypeStr(shape[key]);
+      });
       return JSON.stringify(rst, null, 2);
     default:
       return capitalize(type.name);

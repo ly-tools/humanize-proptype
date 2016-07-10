@@ -1,9 +1,9 @@
 # humanize-proptype
 
-[![Test coverage](https://img.shields.io/coveralls/LingyuCoder/humanize-proptype.svg?style=flat-square)](https://coveralls.io/r/LingyuCoder/humanize-proptype?branch=master)
-[![Build Status](https://travis-ci.org/LingyuCoder/humanize-proptype.png)](https://travis-ci.org/LingyuCoder/humanize-proptype)
-[![Dependency Status](https://david-dm.org/LingyuCoder/humanize-proptype.svg)](https://david-dm.org/LingyuCoder/humanize-proptype)
-[![devDependency Status](https://david-dm.org/LingyuCoder/humanize-proptype/dev-status.svg)](https://david-dm.org/LingyuCoder/humanize-proptype#info=devDependencies)
+[![Test coverage](https://img.shields.io/coveralls/ly-tools/humanize-proptype.svg?style=flat-square)](https://coveralls.io/r/ly-tools/humanize-proptype?branch=master)
+[![Build Status](https://travis-ci.org/ly-tools/humanize-proptype.png)](https://travis-ci.org/ly-tools/humanize-proptype)
+[![Dependency Status](https://david-dm.org/ly-tools/humanize-proptype.svg)](https://david-dm.org/ly-tools/humanize-proptype)
+[![devDependency Status](https://david-dm.org/ly-tools/humanize-proptype/dev-status.svg)](https://david-dm.org/ly-tools/humanize-proptype#info=devDependencies)
 [![NPM version](http://img.shields.io/npm/v/humanize-proptype.svg?style=flat-square)](http://npmjs.org/package/humanize-proptype)
 [![node](https://img.shields.io/badge/node.js-%3E=_4.0-green.svg?style=flat-square)](http://nodejs.org/download/)
 [![License](http://img.shields.io/npm/l/humanize-proptype.svg?style=flat-square)](LICENSE)
@@ -117,11 +117,11 @@ humanize({
     }
   }
 });
-/* => 
+/* =>
 {
   "color": "String",
   "fontSize": "Number"
-} 
+}
 */
 
 humanize({
@@ -159,11 +159,11 @@ humanize({
     value: 'Message'
   }]
 });
-/* => 
+/* =>
 {
   "color": "String",
   "fontSize": "Number"
-} │ Array('News' │ 'Photos') │ Class(Message) 
+} │ Array('News' │ 'Photos') │ Class(Message)
 */
 ```
 
